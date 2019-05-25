@@ -11,9 +11,21 @@
 |
 */
 
-Route::get('/', function () {
+
+Route::get('/', function (){
     return view('frontend.welcome');
-});
+})->name('accueil');
+
+Route::get('/connexion', function (){
+    return view('backend.login');
+})->name('connexion');
+
+Route::get('/motdepasse-oublie', function (){
+    return view('backend.forget-password');
+})->name('motdepasse-oublie');
+
+
+Route::resource('/produit', 'ProduitsController');
 
 Auth::routes();
 
