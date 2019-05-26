@@ -12,5 +12,6 @@
 1. Modifier les données de connexion à la base de données dans le ficier `.env`
 1. Taper la commande `php artisan make:auth`
 1. Taper la commande `php artisan mirate`
+1. Taper la commande `php artisan db:seed` pour précharger les données dans la base de données
 1. Taper la commande `php artisan serve` pour tester le projet dans le navigateur
 

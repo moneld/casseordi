@@ -12,20 +12,25 @@
 */
 
 
-Route::get('/', function (){
-    return view('frontend.welcome');
-})->name('accueil');
+Route::get('/', 'FrontendController@accueil')->name('accueil');
 
-Route::get('/connexion', function (){
-    return view('backend.login');
-})->name('connexion');
+Route::get('/connexion', 'FrontendController@connexion')->name('connexion');
 
-Route::get('/motdepasse-oublie', function (){
-    return view('backend.forget-password');
-})->name('motdepasse-oublie');
+Route::get('/motdepasse-oublie', 'FrontendController@motDePasseOublie')->name('motdepasse-oublie');
+
+Route::get('/detail/{id}/produit/', 'FrontendController@detailProduit')->name('detail-produit');
 
 
-Route::resource('/produit', 'ProduitsController');
+Route::group(['prefix' => 'admin','middleware' => 'auth'], function (){
+
+    Route::get('/', function (){
+        return view('backend.dashboard');
+    })->name('dashboard');
+
+    Route::resource('/produit', 'ProduitsController');
+});
+
+
 
 Auth::routes();
 

@@ -32,7 +32,7 @@
                 <div class="menu-desktop">
                     <ul class="main-menu">
                         <li class="active-menu">
-                            <a href="index.html">Accueil</a>
+                            <a href="{{route('accueil')}}">Accueil</a>
 
                         </li>
 
@@ -71,7 +71,7 @@
     <div class="wrap-header-mobile">
         <!-- Logo moblie -->
         <div class="logo-mobile">
-            <a href="index.html"><img src="{{asset('images/')}}/logo/logo.gif" alt="LOGO CASSEORDI"></a>
+            <a href="{{route('accueil')}}"><img src="{{asset('images/')}}/logo/logo.gif" alt="LOGO CASSEORDI"></a>
         </div>
 
         <!-- Icon header -->
@@ -118,7 +118,7 @@
 
         <ul class="main-menu-m">
             <li>
-                <a href="index.html">Accueil</a>
+                <a href="{{route('accueil')}}">Accueil</a>
 
             </li>
 
