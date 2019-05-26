@@ -1,13 +1,13 @@
 @extends('layouts.frontend')
 
-@section('title','Accueil')
+@section('title','Détail du produit')
 
 @section('content')
 
     <!-- Product Detail -->
 
     @foreach($produits as $produit)
-    <section class="sec-product-detail bg0 p-t-65 p-b-60">
+    <section class="sec-product-detail bg0 p-t-65 p-b-60 " style="margin-top: 5%;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-7 p-b-30">
@@ -114,7 +114,11 @@
                         <div class="tab-pane fade show active" id="description" role="tabpanel">
                             <div class="how-pos2 p-lr-15-md">
                                 <p class="stext-102 cl6">
+                                    @if(is_null($produit->detail))
+                                       Il n'y a pas de détail pour ce produit.
+                                    @else
                                     {{$produit->detail}}
+                                    @endif
                                 </p>
                             </div>
                         </div>

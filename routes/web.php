@@ -14,6 +14,12 @@
 
 Route::get('/', 'FrontendController@accueil')->name('accueil');
 
+Route::get('/boutique', 'FrontendController@boutique')->name('boutique');
+
+Route::get('/contact', 'FrontendController@contact')->name('contact');
+
+Route::get('/apropos', 'FrontendController@apropos')->name('apropos');
+
 Route::get('/connexion', 'FrontendController@connexion')->name('connexion');
 
 Route::get('/motdepasse-oublie', 'FrontendController@motDePasseOublie')->name('motdepasse-oublie');

@@ -31,22 +31,22 @@
                 <!-- Menu desktop -->
                 <div class="menu-desktop">
                     <ul class="main-menu">
-                        <li class="active-menu">
+                        <li {{--class="active-menu"--}}>
                             <a href="{{route('accueil')}}">Accueil</a>
 
                         </li>
 
                         <li>
-                            <a href="product.html">Boutique</a>
+                            <a href="{{route('boutique')}}">Boutique</a>
                         </li>
 
 
                         <li>
-                            <a href="about.html">A propos</a>
+                            <a href="{{route('apropos')}}">A propos</a>
                         </li>
 
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="{{route('contact')}}">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -123,16 +123,16 @@
             </li>
 
             <li>
-                <a href="product.html">Boutique</a>
+                <a href="{{route('boutique')}}">Boutique</a>
             </li>
 
 
             <li>
-                <a href="about.html">A propos</a>
+                <a href="{{route('apropos')}}">A propos</a>
             </li>
 
             <li>
-                <a href="contact.html">Contact</a>
+                <a href="{{route('contact')}}">Contact</a>
             </li>
         </ul>
     </div>
