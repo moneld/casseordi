@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="row">
-        <button type="button" class="btn btn-primary ml-auto " style="margin-bottom: 2%; margin-right: 10px;">Ajouter une catégorie</button>
+        <button type="button" class="btn btn-primary ml-auto " style="margin-bottom: 2%; margin-right: 20px;">Ajouter une catégorie</button>
         <div class="col-md-12">
             <table id="dataTables" class="table table-borderless table-data3 text-white">
                 <thead>
