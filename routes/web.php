@@ -34,6 +34,8 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function (){
     })->name('dashboard');
 
     Route::resource('/produit', 'ProduitsController');
+    Route::resource('/categorie', 'CategoriesController');
+    Route::get('/produit/{id}/supprimer','ProduitsController@supprimer')->name('produit.supprimer');
 });
 
 

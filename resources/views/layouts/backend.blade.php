@@ -30,7 +30,7 @@
     <link href="{{asset('backend/')}}/vendor/slick/slick.css" rel="stylesheet" media="all">
     <link href="{{asset('backend/')}}/vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="{{asset('backend/')}}/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
-
+    <link href="{{asset('backend/')}}/css/datatables.min.css" rel="stylesheet" media="all">
     <!-- Main CSS-->
     <link href="{{asset('backend/')}}/css/theme.css" rel="stylesheet" media="all">
 
@@ -64,19 +64,19 @@
                     </li>
 
                     <li>
-                        <a href="#">
-                            <i class="fas fa-chart-bar"></i>Catégories</a>
+                        <a href="{{route('categorie.index')}}">
+                            <i class="fas fa-tags"></i>Catégories</a>
                     </li>
 
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
-                            <i class="fas fa-copy"></i>Produits</a>
+                            <i class="fas fa-shopping-cart"></i>Produits</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="#">Tous les produits</a>
+                                <a href="{{route('produit.index')}}">Tous les produits</a>
                             </li>
                             <li>
-                                <a href="#">Ajouter un produit</a>
+                                <a href="{{route('produit.create')}}">Ajouter un produit</a>
                             </li>
 
                         </ul>
@@ -84,7 +84,7 @@
 
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
-                            <i class="fas fa-copy"></i>Utilisateurs</a>
+                            <i class="fas fa-user"></i>Utilisateurs</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
                                 <a href="#">Tous les utilisateurs</a>
@@ -118,19 +118,19 @@
 
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="fas fa-chart-bar"></i>Catégories</a>
+                        <a href="{{route('categorie.index')}}">
+                            <i class="fas fa-tags"></i>Catégories</a>
                     </li>
 
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
-                            <i class="fas fa-copy"></i>Produits</a>
+                            <i class="fas fa-shopping-cart"></i>Produits</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
-                                <a href="#">Tous les produits</a>
+                                <a href="{{route('produit.index')}}">Tous les produits</a>
                             </li>
                             <li>
-                                <a href="#">Ajouter un produit</a>
+                                <a href="{{route('produit.create')}}">Ajouter un produit</a>
                             </li>
 
                         </ul>
@@ -139,7 +139,7 @@
 
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
-                            <i class="fas fa-copy"></i>Utilisateurs</a>
+                            <i class="fas fa-user"></i>Utilisateurs</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
                                 <a href="#">Tous les utilisateurs</a>
@@ -164,13 +164,12 @@
             <div class="section__content section__content--p30">
                 <div class="container-fluid">
                     <div class="header-wrap">
-                        <form class="form-header" action="" method="POST">
-                            <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
-                            <button class="au-btn--submit" type="submit">
-                                <i class="zmdi zmdi-search"></i>
-                            </button>
-                        </form>
+                       <div></div>
                         <div class="header-button">
+
+                            <div class="noti-wrap">
+                                <a href="{{route('accueil')}}" class="btn btn-sm btn-block btn-primary mr-5">Frontend</a>
+                            </div>
 
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
@@ -224,9 +223,15 @@
 
         <!-- MAIN CONTENT-->
         <div class="main-content">
-            <div class="section__content section__content--p30">
+            <div class="container-fluid">
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
                 @yield('content')
             </div>
+
         </div>
         <!-- END MAIN CONTENT-->
         <!-- END PAGE CONTAINER-->
@@ -254,9 +259,46 @@
 <script src="{{asset('backend/')}}/vendor/chartjs/Chart.bundle.min.js"></script>
 <script src="{{asset('backend/')}}/vendor/select2/select2.min.js">
 </script>
-
+<script src="{{asset('backend/')}}/js/datatables.min.js"></script>
 <!-- Main JS-->
 <script src="{{asset('backend/')}}/js/main.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#dataTables').dataTable( {
+            "language": {
+                "sEmptyTable":     "Aucune donnée disponible dans le tableau",
+                "sInfo":           "Affichage de l'élément _START_ à _END_ sur _TOTAL_ éléments",
+                "sInfoEmpty":      "Affichage de l'élément 0 à 0 sur 0 élément",
+                "sInfoFiltered":   "(filtré à partir de _MAX_ éléments au total)",
+                "sInfoPostFix":    "",
+                "sInfoThousands":  ",",
+                "sLengthMenu":     "Afficher _MENU_ éléments",
+                "sLoadingRecords": "Chargement...",
+                "sProcessing":     "Traitement...",
+                "sSearch":         "Rechercher :",
+                "sZeroRecords":    "Aucun élément correspondant trouvé",
+                "oPaginate": {
+                    "sFirst":    "Premier",
+                    "sLast":     "Dernier",
+                    "sNext":     "Suivant",
+                    "sPrevious": "Précédent"
+                },
+                "oAria": {
+                    "sSortAscending":  ": activer pour trier la colonne par ordre croissant",
+                    "sSortDescending": ": activer pour trier la colonne par ordre décroissant"
+                },
+                "select": {
+                    "rows": {
+                        "_": "%d lignes sélectionnées",
+                        "0": "Aucune ligne sélectionnée",
+                        "1": "1 ligne sélectionnée"
+                    }
+                }
+            }
+        } );
+    } );
+</script>
 
 </body>
 
