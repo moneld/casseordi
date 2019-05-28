@@ -18,7 +18,7 @@ class ProduitsTableSeeder extends Seeder
                                 Processeur 	Intel Core i5
                                 RAM installée 	8 Go
                                 Capacité de stockage 	256 Go',
-            'prix' => '250.000 FCFA',
+            'prix' => '250.000',
             'image_produit' => 'produit-01.jpg',
             'categorie_id' => 1,
             'created_at' => \Carbon\Carbon::now(),
@@ -37,7 +37,7 @@ class ProduitsTableSeeder extends Seeder
                         Inspiré par les gemmes, la couleur stratifiée et profonde rayonne. Le lustre métallique change exquisément avec l\'angle du rayonnement lumineux. Avec la combinaison du point culminant, il crée le plaisir sensuel final.
                         
                         Comprenant un processeur de dernière génération couplé à une carte graphique NVIDIA® GTX 1050, l’UX480 mêle performances techniques et esthétiques. ',
-            'prix' => '450.000 FCFA',
+            'prix' => '450.000',
             'image_produit' => 'produit-03.jpg',
             'categorie_id' => 1,
             'created_at' => \Carbon\Carbon::now(),
@@ -92,7 +92,7 @@ class ProduitsTableSeeder extends Seeder
                         19 Le taux de transfert peut varier. Toutes les spécifications de performance correspondent aux spécifications standard indiquées par les fabricants de composants HP; les performances réelles peuvent être supérieures ou inférieures.
                         20 USB Type-C™ et USB-C™ sont des marques déposées d’USB Implementers Forum.
                         21 Nécessite une carte graphique NVIDIA® GTX 970 ou AMD® R9 390X au minimum, un processeur Intel® Core™ i5 et 8 Go de RAM. Tous les autres composants du système doivent être compatibles VR. ',
-            'prix' => '350.000 FCFA',
+            'prix' => '350.000',
             'image_produit' => 'produit-04.jpg',
             'categorie_id' => 2,
             'created_at' => \Carbon\Carbon::now(),
@@ -109,7 +109,7 @@ class ProduitsTableSeeder extends Seeder
             'detail' => 'ROG STRIX GL10CS-FR048T
 
                         Petit dernier de la famille Strix, le GL10CS réunit à lui seul tous les essentiels de l\'univers gaming avec l\'expérience complète ROG pour offrir à l\'utilisateur des performances de haut-niveau et des options de configuration à un prix abordable. Le GL10CS renferme une puissance colossale dans son boîtier compact de 27 litres dont le design - rappelant celui d\'une armure aux lignes futuristes - reflète la volonté de ROG performances fulgurantes. L\'éclairage RGB personnalisable peut être contrôlé via Armoury Crate, un utilitaire centralisant toutes les optionsde configurations et de suivi des paramètres du GL10CS. ',
-            'prix' => '300.000 FCFA',
+            'prix' => '300.000',
             'image_produit' => 'produit-05.jpg',
             'categorie_id' => 2,
             'created_at' => \Carbon\Carbon::now(),
@@ -121,7 +121,7 @@ class ProduitsTableSeeder extends Seeder
             'nom' => 'Clavier Apple Magic Keyboard avec pavé numérique Gris Sidéral ',
             'description' => 'Désormais disponible en gris sidéral, le Magic Keyboard avec pavé numérique est un clavier étendu qui offre des commandes de navigation pour un défilement rapide dans les documents, et des touches fléchées de taille standard pour les jeux. Son mécanisme à ciseaux assure une meilleure stabilité des touches, tandis que son profil abaissé et la course de touche optimisée offrent confort d’utilisation et précision de frappe. Le pavé numérique est idéal pour les feuilles de calcul et les applications financières. Et comme la batterie intégrée offre une autonomie longue durée, votre clavier est opérationnel pendant au moins un mois entre deux charges. ',
 
-            'prix' => '12.000 FCFA',
+            'prix' => '12.000',
             'image_produit' => 'produit-11.jpg',
             'categorie_id' => 3,
             'created_at' => \Carbon\Carbon::now(),
@@ -141,7 +141,7 @@ class ProduitsTableSeeder extends Seeder
                     
                         960 g',
 
-            'prix' => '8.000 FCFA',
+            'prix' => '8.000',
             'image_produit' => 'produit-12.jpg',
             'categorie_id' => 3,
             'created_at' => \Carbon\Carbon::now(),
@@ -212,7 +212,7 @@ class ProduitsTableSeeder extends Seeder
                         
                         Déverrouillez la molette de défilement pour un défilement continu ultra-rapide pour parcourir rapidement de longues pages ou verrouillez-la pour un défilement de précision par paillers. La lourde roue en métal offre un contrôle sûr, fluide et satisfaisant pour chaque mode. ',
 
-            'prix' => '8.000 FCFA',
+            'prix' => '8.000',
             'image_produit' => 'produit-13.jpg',
             'categorie_id' => 4,
             'created_at' => \Carbon\Carbon::now(),
@@ -225,7 +225,7 @@ class ProduitsTableSeeder extends Seeder
             'description' => 'SOURIS GAMING SANS FIL LIGHTSPEED POUR TOUS.
                 Le capteur HERO nouvelle génération de la souris gaming G305 sans fil LIGHTSPEED offre des performances de 12 000 ppp, tandis que la connectivité sans fil LIGHTSPEED offre un taux de rapport ultra-rapide d\'une milliseconde. La souris G305 dispose d\'une autonomie de 250 heures de jeu fournie par une pile AA et d\'un témoin lumineux vous informant quand votre pile est bientôt épuisée. Grâce à sa conception mécanique efficace, la souris G305 ne pèse que 99 grammes et offre une maniabilité accrue. Grâce à sa forme compacte et résistante et à l\'espace de rangement intégré de son nano-récepteur, la souris G305 est un excellent compagnon de voyage toujours prêt pour le jeu grâce à ses 6 boutons programmables. Au final, cette souris sans fil LIGHTSPEED est prête à l\'emploi et très abordable. ',
 
-            'prix' => '5.000 FCFA',
+            'prix' => '5.000',
             'image_produit' => 'produit-14.jpg',
             'categorie_id' => 4,
             'created_at' => \Carbon\Carbon::now(),

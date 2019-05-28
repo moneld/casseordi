@@ -40,7 +40,7 @@
                         </h4>
 
                         <span class="mtext-106 cl2">
-							{{$produit->prix}}
+							{{$produit->prix}} FCFA
 						</span>
 
                         <p class="stext-102 cl3 p-t-23">
@@ -65,9 +65,9 @@
                                         </div>
                                     </div>
 
-                                    <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+                                    <a href="{{route('panier.edit',$produit->id)}}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
                                         Ajouter au panier
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

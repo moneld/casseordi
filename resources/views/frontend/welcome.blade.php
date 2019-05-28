@@ -178,7 +178,7 @@
                                     </a>
 
                                     <span class="stext-105 cl3">
-									{{$produit->prix}}
+									{{$produit->prix}} FCFA
 								</span>
                                 </div>
 

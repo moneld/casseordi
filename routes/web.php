@@ -26,6 +26,7 @@ Route::get('/motdepasse-oublie', 'FrontendController@motDePasseOublie')->name('m
 
 Route::get('/detail/{id}/produit/', 'FrontendController@detailProduit')->name('detail-produit');
 
+Route::resource('/panier', 'PaniersController');
 
 Route::group(['prefix' => 'admin','middleware' => 'auth'], function (){
 
